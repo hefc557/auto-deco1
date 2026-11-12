@@ -231,7 +231,7 @@ class $modify(AutoDecoPause, EditorPauseLayer) {
 		);
 		menu->addChild(btn);
 		auto win = CCDirector::get()->getWinSize();
-		menu->setPosition({ win.width - 70.f, 30.f });
+		menu->setPosition({ win.width / 2.f, win.height - 38.f });
 		this->addChild(menu);
 		return true;
 	}
