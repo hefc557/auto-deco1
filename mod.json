@@ -1,0 +1,70 @@
+{
+	"geode": "4.0.0",
+	"gd": "*",
+	"id": "yourname.auto-deco",
+	"name": "Auto Deco",
+	"version": "v1.2.0",
+	"developer": "yourname",
+	"description": "One-click themed auto decoration (Hell, Heaven, Water and more) for your level in the editor.",
+	"tags": [
+		"editor",
+		"utility"
+	],
+	"settings": {
+		"deco-ids": {
+			"type": "string",
+			"name": "Custom Theme Object IDs",
+			"description": "Used by the \"Custom\" button. Comma-separated object IDs (e.g. 39,392). Picked randomly.",
+			"default": "39"
+		},
+		"density": {
+			"type": "int",
+			"name": "Density (%)",
+			"description": "Chance that an exposed block edge gets a decoration.",
+			"default": 60,
+			"min": 1,
+			"max": 100
+		},
+		"decorate-top": {
+			"type": "bool",
+			"name": "Decorate Tops",
+			"default": true
+		},
+		"decorate-sides": {
+			"type": "bool",
+			"name": "Decorate Sides",
+			"default": true
+		},
+		"decorate-bottom": {
+			"type": "bool",
+			"name": "Decorate Bottoms",
+			"default": false
+		},
+		"no-touch": {
+			"type": "bool",
+			"name": "No Touch",
+			"description": "Makes placed decorations harmless (recommended, so spikes etc. do not kill you).",
+			"default": true
+		},
+		"max-objects": {
+			"type": "int",
+			"name": "Max Objects Per Run",
+			"description": "Safety cap so huge levels don't freeze the editor.",
+			"default": 3000,
+			"min": 100,
+			"max": 20000
+		},
+		"recolor-scene": {
+			"type": "bool",
+			"name": "Recolor Background & Ground",
+			"description": "Themes also place color triggers at the start of the level for the background and ground.",
+			"default": true
+		},
+		"random-scale": {
+			"type": "bool",
+			"name": "Random Scale",
+			"description": "Themed decorations get a random size for variety.",
+			"default": true
+		}
+	}
+}
