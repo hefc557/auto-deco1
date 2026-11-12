@@ -6,6 +6,10 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(AutoDeco VERSION 1.0.0)
 
+# Workaround: newer Clang versions fail to compile the bundled fmt 11.0.2 because of
+# consteval format-string checks. Turning consteval off for fmt fixes the build.
+add_compile_definitions(FMT_USE_CONSTEVAL=0)
+
 file(GLOB SOURCES src/*.cpp)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
